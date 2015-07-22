@@ -1,0 +1,39 @@
+//
+//  ViewController.m
+//  Video
+//
+//  Created by jdong on 15-7-13.
+//  Copyright (c) 2015年 jdong. All rights reserved.
+//
+
+#import "ViewController.h"
+#import "CourseAPI.h"
+#import "VideoCacheViewController.h"
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    CourseAPI *api = [[CourseAPI alloc] init];
+    [api findCourseListWithCompletion:^(BOOL success, NSDictionary *object){
+        if (success) {
+            NSArray *courses = object[@"course_list"];
+            NSLog(@"course: %@", courses);
+            // ui actions
+        } else {
+            // 提示网络异常
+        }
+    }];
+    
+    [self.navigationController pushViewController:[[VideoCacheViewController alloc] init] animated:YES];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

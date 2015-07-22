@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="KGk-i7-Jjw" customClass="CourseCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="椭圆 3 副本" translatesAutoresizingMaskIntoConstraints="NO" id="LKN-nw-8kW">
+                        <rect key="frame" x="8" y="25" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="09f-a8-Lfj"/>
+                            <constraint firstAttribute="width" constant="12" id="ezt-Nb-q2M"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vZ-HT-Rvs">
+                        <rect key="frame" x="35" y="15" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="NIX-EQ-kKd"/>
+                            <constraint firstAttribute="height" constant="20" id="Toy-QS-Z6L"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.23921568627450981" green="0.23921568627450981" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMs-oF-YvM">
+                        <rect key="frame" x="35" y="40" width="150" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="5mJ-qU-BRb"/>
+                            <constraint firstAttribute="height" constant="10" id="S1b-aV-HGe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geP-gF-c5l">
+                        <rect key="frame" x="292" y="22" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Vkb-DN-X5d"/>
+                            <constraint firstAttribute="width" constant="20" id="d2q-BP-AIh"/>
+                        </constraints>
+                        <state key="normal" image="ic_period_download">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="disabled" image="ic_download_finish"/>
+                        <state key="selected" image="pauseDownload"/>
+                        <connections>
+                            <action selector="clickBtton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Pjg-Za-eUh"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNq-3m-s8T">
+                        <rect key="frame" x="0.0" y="65" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dpq-YT-HA9"/>
+                        </constraints>
+                    </view>
+                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3u7-hj-c95" customClass="LYProgressView">
+                        <rect key="frame" x="35" y="55" width="235" height="2"/>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LKN-nw-8kW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="FiB-qR-Xzc"/>
+                    <constraint firstItem="JMs-oF-YvM" firstAttribute="top" secondItem="3vZ-HT-Rvs" secondAttribute="bottom" constant="5" id="HKJ-x5-KZw"/>
+                    <constraint firstAttribute="trailing" secondItem="geP-gF-c5l" secondAttribute="trailing" constant="8" id="Hp9-l8-3A9"/>
+                    <constraint firstItem="3vZ-HT-Rvs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Kok-vp-0Et"/>
+                    <constraint firstItem="cNq-3m-s8T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="65" id="Ksy-3W-Iwq"/>
+                    <constraint firstItem="geP-gF-c5l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="Nb3-V3-Up4"/>
+                    <constraint firstAttribute="trailing" secondItem="cNq-3m-s8T" secondAttribute="trailing" id="RVz-5s-toR"/>
+                    <constraint firstItem="JMs-oF-YvM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="cl6-FI-s0c"/>
+                    <constraint firstItem="LKN-nw-8kW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="glk-Wb-res"/>
+                    <constraint firstItem="3vZ-HT-Rvs" firstAttribute="leading" secondItem="LKN-nw-8kW" secondAttribute="trailing" constant="15" id="hqy-SJ-9iL"/>
+                    <constraint firstItem="cNq-3m-s8T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rlO-Xa-1KX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="downloadBtn" destination="geP-gF-c5l" id="PCa-7A-W05"/>
+                <outlet property="durtionLabel" destination="JMs-oF-YvM" id="mKk-xg-vRa"/>
+                <outlet property="playing" destination="LKN-nw-8kW" id="yd6-Sf-js8"/>
+                <outlet property="progressView" destination="3u7-hj-c95" id="Qyi-Hq-8QL"/>
+                <outlet property="titleLabel" destination="3vZ-HT-Rvs" id="fW3-f6-Jj1"/>
+            </connections>
+            <point key="canvasLocation" x="306" y="477.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_download_finish" width="29" height="29"/>
+        <image name="ic_period_download" width="30" height="30"/>
+        <image name="pauseDownload" width="28" height="28"/>
+        <image name="椭圆 3 副本" width="10" height="10"/>
+    </resources>
+</document>
